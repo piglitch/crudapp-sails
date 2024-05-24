@@ -53,7 +53,7 @@ module.exports.datastores = {
   },
   mongodb: {
     adapter: 'sails-mongo',
-    url: 'mongodb+srv://avibanerjee:kjhg3HN0xqxGFMVS@cluster0.dda4adi.mongodb.net/?retryWrites=true&w=majority',
+    url: process.env.MONGODB_URI,
     database: 'employeeDB'
   }
 };
