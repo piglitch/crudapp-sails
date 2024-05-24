@@ -1,0 +1,17 @@
+<h1>Employee List</h1>
+<a href="/">Home</a>
+<ul>
+  <% employees.forEach(function(emp){ %>
+    <li>
+      <div>First name: <%= emp.firstName %></div>
+      <div>Last name: <%= emp.lastName %></div>
+      <div>Email: <%= emp.email %></div>
+      <div>Role: <%= emp.role %></div>
+      <button><a href="/employees/edit/<%= emp.id %>">Edit</a></button>
+      <form action="/employees/delete/<%= emp.id %>" method="post">
+        <input type="submit" value="Delete">
+      </form>
+    </li>
+    <p></p>
+  <% }) %>
+</ul>
